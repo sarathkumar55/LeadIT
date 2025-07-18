@@ -912,6 +912,7 @@ img{
 }
 
 .sec-title h2{
+	text-align: center;
     color:#0c0d24;
     font-weight: 800;
     line-height: 1.4em;

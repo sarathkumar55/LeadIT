@@ -29,160 +29,139 @@
     <div class="preloader"></div>
  	
  	<!-- Main Header / Header Style Three-->
-  <header class="main-header">
-    	
-		<!--Header-Upper-->
-        <div class="header-upper">
-        	<div class="auto-container clearfix">
-            	
-				<div class="pull-left logo-box">
-					<div class="logo"><a href="index.html"><img src="images/Lead IT Logo.png" alt="" title=""></a></div>
-				</div>
-				
-				<div class="nav-outer clearfix">
-					<!--Mobile Navigation Toggler-->
-					<div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
-					<!-- Main Menu -->
-					<nav class="main-menu navbar-expand-md">
-						<div class="navbar-header">
-							<!-- Toggle Button -->    	
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div>
-						
-						<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-							<ul class="navigation clearfix">
-								<li><a href="index.html">Home</a>
-									<ul>
-										
-									</ul>
-								</li>
-								<li><a href="about.html">About</a>
-									
-								</li>
-								<li class="mega-dropdown dropdown " >
-<a href="services.html" onclick="window.location.href='services.html'; return true;">Services</a>  <div class="mega-menu">
-    <ul class="column">
-     <li><a href="service-detail.html?service=ai-ml">Artificial Intelligence & Machine Learning</a></li>
-<li><a href="service-detail.html?service=cloud">Cloud Computing & Infrastructure</a></li>
-      <li><a href="service-detail.html?service=data_analytics">Advanced Data Analytics & Data Science</a></li>
-      <li><a href="service-detail.html?service=cybersecurity">Cybersecurity & Risk Management</a></li>
-      <li><a href="service-detail.html?service=iot_edge">Connected Intelligence (IoT & Edge Computing)</a></li>
-    </ul>
-    <div class="divider"></div>
-    <ul class="column">
-      <li><a href="service-detail.html?service=blockchain">Blockchain & Distributed Ledger Technologies</a></li>
-      <li><a href="service-detail.html?service=rpa">Robotic Process Automation (RPA) & Intelligent Automation</a></li>
-      <li><a href="service-detail.html?service=development">Development & Integration Capabilities (Full-Stack Excellence)</a></li>
-      <li><a href="service-detail.html?service=integration">Enterprise Integration & API Management</a></li>
-      <li><a href="service-detail.html?service=industry">Industry-Specific Solutions</a></li>
-    </ul>
+   <header class="main-header header-style-three">
+  <!-- Header-Upper -->
+  <div class="header-upper">
+    <div class="auto-container clearfix">
+      <div class="d-flex justify-content-between align-items-center d-md-none d-flex">
+        <!-- Logo (Mobile) -->
+        <div class="logo-box">
+          <a href="index.html">
+            <img src="images/Lead IT Logo.png" alt="" title="" />
+          </a>
+        </div>
+        <!-- Toggler (Mobile) -->
+        <div class="mobile-nav-toggler">
+          <span class="icon flaticon-menu"></span>
+        </div>
+      </div>
+
+      <div class="d-none d-md-flex justify-content-between align-items-center">
+        <!-- Logo (Desktop) -->
+        <div class="pull-left logo-box">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/Lead IT Logo.png" alt="" title="" />
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-outer clearfix d-flex align-items-center w-100 justify-content-between">
+          <!-- Main Menu -->
+          <nav class="main-menu navbar-expand-md w-100">
+            <div class="navbar-header">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+              <ul class="navigation clearfix">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="mega-dropdown dropdown">
+                  <a href="services.html" onclick="window.location.href='services.html'; return true;">Services</a>
+                  <div class="mega-menu">
+                    <ul class="column">
+                      <li><a href="service-detail.html?service=ai-ml">Artificial Intelligence & Machine Learning</a></li>
+                      <li><a href="service-detail.html?service=cloud">Cloud Computing & Infrastructure</a></li>
+                      <li><a href="service-detail.html?service=data_analytics">Advanced Data Analytics & Data Science</a></li>
+                      <li><a href="service-detail.html?service=cybersecurity">Cybersecurity & Risk Management</a></li>
+                      <li><a href="service-detail.html?service=iot_edge">Connected Intelligence (IoT & Edge Computing)</a></li>
+                    </ul>
+                    <div class="divider"></div>
+                    <ul class="column">
+                      <li><a href="service-detail.html?service=blockchain">Blockchain & Distributed Ledger Technologies</a></li>
+                      <li><a href="service-detail.html?service=rpa">Robotic Process Automation (RPA) & Intelligent Automation</a></li>
+                      <li><a href="service-detail.html?service=development">Development & Integration Capabilities (Full-Stack Excellence)</a></li>
+                      <li><a href="service-detail.html?service=integration">Enterprise Integration & API Management</a></li>
+                      <li><a href="service-detail.html?service=industry">Industry-Specific Solutions</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="case-studio.html">Corporate </a></li>
+				<li><a href="project.html">Projects</a></li>
+				<li><a href="products.html">Products</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <!-- Broucher (Web) -->
+          <div class="outer-box clearfix">
+            <div class="btn-box">
+              <a href="contact.html" class="btn-style-one theme-btn">
+                <span class="txt"><i class="flaticon-download"></i> Broucher</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</li>
+  <!-- End Header Upper -->
 
-	
-
-	
-
-								
-								<li><a href="careers.html">Careers</a>
-									<ul>
-										
-										
-										
-									</ul>
-								</li>
-								<!-- <li class="dropdown"><a href="#">Blog</a>
-									<ul>
-										<li><a href="blog.html">Our Blog</a></li>
-										<li><a href="blog-list.html">Blog List</a></li>
-										<li><a href="blog-detail.html">Blog Detail</a></li>
-										<li><a href="not-found.html">Not Found</a></li>
-									</ul>
-								</li> -->
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-						</div>
-					</nav>
-					
-					<!-- Main Menu End-->
-					<div class="outer-box clearfix">
-						
-					
-						<!-- Btn Box -->
-						<div class="btn-box">
-							<a href="contact.html" class="btn-style-one theme-btn"><span class="txt"><i class="flaticon-download"></i>Broucher</span></a>
-						</div>
-						
-					</div>
-				</div>
-				
-            </div>
+  <!-- Sticky Header -->
+  <div class="sticky-header">
+    <div class="auto-container clearfix">
+      <div class="logo pull-left">
+        <a href="index.html" title=""><img src="images/Lead IT Logo.png" alt="" title="" /></a>
+      </div>
+      <div class="pull-right">
+        <nav class="main-menu"></nav>
+        <div class="outer-box clearfix">
+          <div class="btn-box">
+            <a href="contact.html" class="btn-style-one theme-btn">
+              <span class="txt"><i class="flaticon-download"></i> Broucher</span>
+            </a>
+          </div>
         </div>
-        <!--End Header Upper-->
-        
-		<!-- Sticky Header  -->
-        <div class="sticky-header">
-            <div class="auto-container clearfix">
-                <!--Logo-->
-                <div class="logo pull-left">
-                    <a href="index.html" title=""><img src="images/Lead IT Logo.png" alt="" title=""></a>
-                </div>
-                <!--Right Col-->
-                <div class="pull-right">
-                    <!-- Main Menu -->
-                    <nav class="main-menu">
-                        <!--Keep This Empty / Menu will come through Javascript-->
-                    </nav>
-					<!-- Main Menu End-->
-					
-					<!-- Main Menu End-->
-					<div class="outer-box clearfix">
-						
-					
-						
-						
-					
-					
-						
-						<!-- Btn Box -->
-						<div class="btn-box">
-							<a href="contact.html" class="btn-style-one theme-btn"><span class="txt"><i class="flaticon-download"></i>Broucher</span></a>
-						</div>
-						
-					</div>
-					
-                </div>
-            </div>
-        </div>
-		<!-- End Sticky Menu -->
-    
-		<!-- Mobile Menu  -->
-        <div class="mobile-menu">
-            <div class="menu-backdrop"></div>
-            <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
-            
-            <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
-                <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-            </nav>
-        </div><!-- End Mobile Menu -->
-	
-    </header>
+      </div>
+    </div>
+  </div>
+  <!-- End Sticky Menu -->
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="menu-backdrop"></div>
+    <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+
+    <nav class="menu-box">
+      <div class="nav-logo">
+        <a href="index.html"><img src="images/Lead IT Logo.png" alt="" title="" /></a>
+      </div>
+      <div class="menu-outer"><!-- Menu from JS --></div>
+      <!-- Mobile Broucher Button -->
+      <div class="mobile-broucher" style="text-align:center; padding: 15px;">
+        <a href="contact.html" class="btn-style-one theme-btn">
+          <span class="txt"><i class="flaticon-download"></i> Broucher</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <!-- End Mobile Menu -->
+</header>
     <!-- End Main Header -->
 	
 	<!-- Page Title Section / Style Five -->
     <section class="page-title-section style-five">
 		<div class="left-color-layer"></div>
 		<div class="right-color-layer"></div>
-		<div class="icon-layer-one" style="background-image: url(images/icons/icon-1.png)"></div>
 		<div class="icon-layer-two" style="background-image: url(images/icons/icon-4.png)"></div>
-		<div class="icon-layer-three" style="background-image: url(images/icons/icon-1.png)"></div>
-		<div class="icon-layer-four" style="background-image: url(images/icons/icon-12.png)"></div>
-		<div class="icon-layer-five" style="background-image: url(images/icons/icon-10.png)"></div>
 		<div class="auto-container">
             <!-- Content Boxed -->
 			<div class="content-boxed">
@@ -224,8 +203,8 @@ Springfield, IL 62704-1519
 								</li>
 								<li>
 									<strong>Social</strong>
-									<a href="#" class="fa fa-facebook-f"></a>
-									<a href="#" class="fa fa-linkedin"></a>
+									<a href="https://www.facebook.com/LeadITGroup" class="fa fa-facebook-f"></a>
+									<a href="https://in.linkedin.com/company/lead-it-corporation" class="fa fa-linkedin"></a>
 									<a href="#" class="fa fa-slack"></a>
 									<a href="#" class="fa fa-dribbble"></a>
 								</li>

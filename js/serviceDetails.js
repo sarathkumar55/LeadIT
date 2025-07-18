@@ -60,7 +60,7 @@ const services = {
     whyChoose: [
       "30,000+ certified tech professionals and data scientists",
       "100% Domain-specific model training & fine-tuning",
-      "Level 3 CMMI for Service Excellence",
+      "Level3  CMMI for Service Excellence",
     ],
     ctaHead: "Let’s Build Smarter Together",
     ctatesx:
