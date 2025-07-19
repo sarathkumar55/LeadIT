@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lead IT</title>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+</head>
+ <script src="js/loader.js"></script>
+<style>
+  .news-section h3 {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0;
+    line-height: 1.4;
+  }
+
+  .news-section h4 {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #777;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .news-section p {
+    font-family: 'Lato', 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+.news-year-tabs {
+
+  top: 0;
+  z-index: 1000;
+  background: #1a1a1a;
+  display: flex;
+  
+  border-bottom: 2px solid #444;
+  margin-bottom: 20px;
+}
+.news-year-tabs li {
+  flex: 0 0 auto;
+  padding: 0 15px;
+  position: relative;
+  list-style: none;
+}
+.news-year-tabs li a {
+  color: white;
+  font-weight: 600;
+  display: block;
+  padding: 12px 0;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+.news-year-tabs li.active a,
+.news-year-tabs li a.active {
+  border-bottom: 3px solid #00bcd4;
+}
+.news-year-tabs li.active::after,
+.news-year-tabs li a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #00bcd4;
+}
+@media (max-width: 768px) {
+  .news-year-tabs {
+    white-space: nowrap;
+  }
+  .news-year-tabs li {
+    padding: 0 10px;
+  }
+}
+</style>
+<body>
+
+<div class="page-wrapper">
+ 	
+   
+    <div class="preloader"></div>
+ 	
+ 	<!-- Main Header-->
+<header class="main-header header-style-three" >
+  <!-- Header-Upper -->
+  <div class="header-upper">
+    <div class="auto-container clearfix">
+      <div class="d-flex justify-content-between align-items-center d-md-none d-flex">
+        <!-- Logo (Mobile) -->
+        <div class="logo-box">
+          <a href="index.html">
+            <img src="images/Lead IT Logo.png" alt="" title="" />
+          </a>
+        </div>
+        <!-- Toggler (Mobile) -->
+        <div class="mobile-nav-toggler">
+          <span class="icon flaticon-menu"></span>
+        </div>
+      </div>
+
+      <div class="d-none d-md-flex justify-content-between align-items-center">
+        <!-- Logo (Desktop) -->
+        <div class="pull-left logo-box">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/Lead IT Logo.png" alt="" title="" />
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-outer clearfix d-flex align-items-center w-100 justify-content-between">
+          <!-- Main Menu -->
+          <nav class="main-menu navbar-expand-md w-100">
+            <div class="navbar-header">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+              <ul class="navigation clearfix">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="mega-dropdown dropdown">
+                  <a href="services.html" onclick="window.location.href='services.html'; return true;">Services</a>
+                  <div class="mega-menu">
+                    <ul class="column">
+                      <li><a href="service-detail.html?service=ai-ml">Artificial Intelligence & Machine Learning</a></li>
+                      <li><a href="service-detail.html?service=cloud">Cloud Computing & Infrastructure</a></li>
+                      <li><a href="service-detail.html?service=data_analytics">Advanced Data Analytics & Data Science</a></li>
+                      <li><a href="service-detail.html?service=cybersecurity">Cybersecurity & Risk Management</a></li>
+                      <li><a href="service-detail.html?service=iot_edge">Connected Intelligence (IoT & Edge Computing)</a></li>
+                    </ul>
+                    <div class="divider"></div>
+                    <ul class="column">
+                      <li><a href="service-detail.html?service=blockchain">Blockchain & Distributed Ledger Technologies</a></li>
+                      <li><a href="service-detail.html?service=rpa">Robotic Process Automation (RPA) & Intelligent Automation</a></li>
+                      <li><a href="service-detail.html?service=development">Development & Integration Capabilities (Full-Stack Excellence)</a></li>
+                      <li><a href="service-detail.html?service=integration">Enterprise Integration & API Management</a></li>
+                      <li><a href="service-detail.html?service=industry">Industry-Specific Solutions</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="case-studio.html">Corporate </a></li>
+                <li><a href="project.html">Projects</a></li>
+				<li><a href="products.html">Products</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <!-- Broucher (Web) -->
+           <div class="outer-box clearfix">
+            <div class="btn-box">
+              <a href="./images/resource/Corporateb.pdf" class="btn-style-one theme-btn">
+                <span class="txt"><i class="flaticon-download"></i> Broucher</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Header Upper -->
+
+  <!-- Sticky Header -->
+  <div class="sticky-header">
+    <div class="auto-container clearfix">
+      <div class="logo pull-left">
+        <a href="index.html" title=""><img src="images/Lead IT Logo.png" alt="" title="" /></a>
+      </div>
+      <div class="pull-right">
+        <nav class="main-menu"></nav>
+        <div class="outer-box clearfix">
+          <div class="btn-box">
+            <a href="contact.html" class="btn-style-one theme-btn">
+              <span class="txt"><i class="flaticon-download"></i> Broucher</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Sticky Menu -->
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="menu-backdrop"></div>
+    <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+
+    <nav class="menu-box">
+      <div class="nav-logo">
+        <a href="index.html"><img src="images/Lead IT Logo.png" alt="" title="" /></a>
+      </div>
+      <div class="menu-outer"><!-- Menu from JS --></div>
+      <!-- Mobile Broucher Button -->
+      <div class="mobile-broucher" style="text-align:center; padding: 15px;">
+        <a href="contact.html" class="btn-style-one theme-btn">
+          <span class="txt"><i class="flaticon-download"></i> Broucher</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <!-- End Mobile Menu -->
+</header>
+
+
+
+
+
+ 
+	<section class="news-section">
+  <div class="auto-container">
+    <div class="sec-title centered" style="background: url('./images/resource/newsbanner.jpg') center center/cover no-repeat; padding: 80px 20px; color: #fff; border-radius: 8px;">
+      <h2 style="color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">News at LeadIT</h2>
+    </div>
+
+    <!-- News Navigation Scroll Links -->
+    <ul class="nav nav-tabs news-year-tabs custom-tab-style">
+      <li><a href="#news2020">News 2020</a></li>
+      <li><a href="#news2016">News 2016</a></li>
+      <li><a href="#news2015">News 2015</a></li>
+      <li><a href="#news2014">News 2014</a></li>
+      <li><a href="#news2013">News 2013</a></li>
+      <li><a href="#news2012">News 2012</a></li>
+    </ul>
+
+    <!-- News Content All Visible -->
+    <div class="all-news-content">
+      <div id="news2020" class="news-block">
+        <h4>18 August, 2020</h4>
+        <h3>Technology and trampolines – Ram Talluri has businesses worldwide...</h3>
+        <img src="images/resource/outing2016.jpg" alt="2020 News" class="img-responsive">
+        <p>Springfield-based entrepreneur Ram Talluri reaches for the stars with his numerous business ventures around the world, ranging from technology to film production to jumping really high on trampolines. “It has been a great run so far, and I look forward to adding more value in whatever way I can,” the 45-year-old Talluri said. “I want people to know that with the right attitude and the ability to work hard, together we all can make an impact.” <a href="https://springfieldbusinessjournal.com/2020/08/technology-and-trampolines-ram-talluri-has-businesses-worldwide-including-a-global-technology-company-based-in-springfield/" target="_blank">Read More</a></p>
+      </div>
+
+      <div id="news2016" class="row">
+        <div class="col-md-4 col-sm-12">
+          <h4>18 Dec, 2016</h4>
+          <h3>Team Outing at Leonia resorts – LeadIT ODC</h3>
+          <img src="images/resource/outing2016.jpg" alt="Leonia" class="img-responsive">
+          <p>An escape from one's daily work refreshes the mind and helps focus back on priorities at work. Lead IT always believes and supports the notion of work-life balance. LeadIT gives space for its employees to pursue life other than work. On December 18th 2016, LeadIT organized a team outing filled with Fun, entertainment, and amusement at Leonia resorts. Various activities like singing, dancing, go-karting, swimming, playing games and much more are conducted throughout the day. These activities are fun and also helped in improving the team building and coordination. The entire day was exciting and turned out to be a memorable day for all employees.</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>26 Sep, 2016</h4>
+          <h3>Lead IT at University of Illinois Business Process Improvement Showcase Event</h3>
+          <img src="images/resource/illinois-showcase.png" alt="University" class="img-responsive">
+          <p>Leroy Singleton and Lorrie Whitener hosted a booth at the Business Process Improvement Showcase on September 22, 2016 at the University of Illinois, Champaign/Urbana Campus. This was an opportunity to share ideas on how to improve business processes at the University of Illinois for delivering faster and better services to faculty, students, and other stakeholders given the current fiscal environment. The event was attended by over 200 U of I staff members that included business managers, human resources managers, faculty, and other stakeholders at the University. Lead IT was able to share company information, promote the services we will provide for the KRS102 contract awarded to us, while learning their needs. TutorsWeb, a LeadIT product, was demonstrated at the event which garnered a lot of interest among attendees. Great Event!</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>14 Sep, 2016</h4>
+          <h3>We are pleased to announce Lead IT has made it to Inc 5000 for the 4th consecutive year</h3>
+          <p>The Inc 5000 is a highly-competitive list that represents the fastest-growing and most successful private companies. Our repeated appearance on the list is an honor for us and testimony to the expertise of our teams and the trust we have earned from our customers.</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>13 May, 2016</h4>
+          <h3>LeadIT Reaffirms its Commitment to Diversity</h3>
+          <img src="images/resource/diversity-initiative.jpg" alt="Diversity" class="img-responsive">
+          <p>Lead IT gave fresh impetus to its commitment to women empowerment by initiating exclusive events for women employees to give them an opportunity to take time off from coding and sharpen their networking skills.
+Girls at Lead IT represent a diverse range of complex programming and software engineering skills and there’s gender diversity on every team.
+They hold demanding jobs, but these dedicated girl geeks showed up in full strength to share their interests, connect, bond and enjoy other fun activities to launch the ladies networking group</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>12 Mar, 2016</h4>
+          <h3>Self-learning online courses launched</h3>
+          <img src="images/resource/tutorsweb-launch1.jpg" alt="Self learning" class="img-responsive">
+          <p>TutorsWeb hosted a well-attended launch event on Friday evening to unveil a series of exclusive courses on Life Skills developed by TutorsWeb for its award-winning platform. The launch event, held at Ravindra BharathI, the city’s most popular venue for business and cultural events.</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>03 Mar, 2016</h4>
+          <h3>MaaStars App launched</h3>
+          <img src="images/resource/FILM APP.jpg" alt="Mahesh Babu" class="img-responsive">
+          <p>Here’s some exciting news for Tollywood fans! The South Indian cinema has finally gone tech-friendly with the launch of the industry’s first film news app in Hyderabad on Wednesday.The app was launched by Mahesh Babu in a cine function.</p>
+        </div>
+      </div>
+      <div class="row" id="news2016">
+        <div class="col-md-4 col-sm-12">
+          <h4>03 Mar, 2016</h4>
+          <h3>The Buzz around the MaaStars App</h3>
+          <p>We are delighted to announce we presented out first movie industry app: the MaaStars App , for South Indian cinema, amidst a lot of glitz and publicity. Like Hollywood, Tollywood too enjoys a huge fan base and South Indian cinema and its many stars have fanatic followers. Our app launch caught a whiff of the same glamour and buzz that surrounded the audio launch of Tollywood superstar Krishna’s comeback film, held at the same date and place as part of the launch strategyFollowing the success of its MaaStars website which has been inundated with visitors, Lead IT saw the MaaStars apps as the perfect next step to take to connect with MaaStar’s existing user base. Lead ITs team of young innovators started building around the idea of an app that ensures absolute engagement and entertainment for Tollywood’s fan base.</p>
+        </div>
+      </div>
+
+      <div id="news2015" class="row">
+        <div class="col-md-4 col-sm-12">
+          <h4>16 Dec, 2015</h4>
+          <h3>Crash Warn App launched</h3>
+          <img src="images/resource/CrashwarnLogo.png" alt="Crash Warn App" class="img-responsive">
+          <p>The one app you can’t live without! Wouldn’t you like your loved ones to know if you’ve been involved in an accident? Wouldn’t you like to reach out to people who‘d ensure you receive help wherever you are whenever you’re in distress?Here’s a smart app from LeadIT that doesn’t require a paid download or ongoing subscription or a costly installation in your car. The app allows you to add up to five numbers to receive an immediate notification if you’ve been involved in accident. Your geographical location is captured instantly and included in the sms message so that the friends and family can contact the nearest emergency response services or medical support immediately.</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>12 Dec, 2015</h4>
+          <h3>Maa Stars Website Launch</h3>
+          <img src="images/resource/Maastarslaunch.jpg" alt="Maa Stars Website" class="img-responsive">
+          <p>Maastars (www.maastars.com) website has been launched by vijayanirmala garu, This website was developed by Leaditgroup team, sponsored by Ram Talluri, CEO of the LeaditGroup. Suresh Kondeti is one of the Supporting co-sponsor for "MaaStars.com" Website.</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>11 Nov, 2015</h4>
+          <h3>LeadIT wins BBB Torch Award 2015</h3>
+          <img src="images/resource/BBB Torch Award Winner_2015edited-2.jpg" alt="BBB Award" class="img-responsive">
+          <p>BBB has determined that Lead IT Corporation meets BBB accreditation standards, which include a commitment to make a good faith effort to resolve any consumer complaints. BBB Accredited Businesses pay a fee for accreditation review/monitoring and for support of BBB services to the public.BBB accreditation does not mean that the business' products or services have been evaluated or endorsed by BBB, or that BBB has made a determination as to the business' product quality or competency in performing services.</p>
+        </div>
+      </div>
+
+  <div id="news2015" class="row">
+        <div class="col-md-4 col-sm-12">
+          <h4>19 Aug, 2015</h4>
+          <h3>Inc 500 – Lead IT Provides IT staffing and consulting services to companies ranging from Fortune 500 to emerging status</h3>
+          <p>LeadIT has accomplished the task of making the Inc 500 list for the third consecutive year, this time ranking 3173 with a 108% growth over the past three 3 years.</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>20 June, 2015</h4>
+          <h3>Lead IT Corporation rated at
+CMMI Maturity Level 3!!!</h3>
+          <img src="images/resource//Apprisal.jpg" alt="News 2" class="img-responsive">
+          <p>Lead IT Corporation has successfully completed the SCAMPI review and is now rated at CMMI Level 3. This rating is a conformation of quality work and rigorous processes that we follow for our products as well as for Client's Projects.</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>16 July, 2015</h4>
+          <h3>Lead IT Corporation is one of the recipients of the first Emerging 10 Awards</h3>
+          <img src="images/resource/Mid-States.png" alt="News 3" class="img-responsive">
+          <p>Lead IT Corporation is one of the recipients of the first Emerging 10 Awards, presented by the Mid-States Minority Supplier Development Council. The Emerging 10 Awards recognize minority businesses making significant contributions to their industry and community.The judging criteria included
+Exceptional service, Overall industry enhancement, Community involvement, Innovative performance and oing business with other MBEs</p>
+        </div>
+      </div>
+
+      <div id="news2015" class="row">
+        <div class="col-md-4 col-sm-12">
+          <h4>11 June, 2015</h4>
+          <h3>LEAD IT CORPORATION has selected as one of DiversityBusiness.com's "Top Business for 2015"</h3>
+          <p>LEAD IT have distinguished ITself as one of the top entrepreneurs in the country and are most deserving of this award and recognition.LEAD IT rankings are
+3rd ranking - Top 50 Women Owned Businesses in Illinois - 2013 21th ranking - Top 100 Privately-held Businesses in Illinois - 2015 15th ranking - 50 Privately-held Businesses in Illinois - 2015 15th ranking - Top 100 Diversity Owned Businesses in Illinois – 2015 67th ranking - Top 500 Women Owned Businesses in the U.S - 2015 311st ranking - Top 500 Diversity Owned Businesses in the U.S - 2015</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>18 May, 2015</h4>
+          <h3>Asian Pacific American History Month MBE Spotlight</h3>
+          <img src="images/resource//Asian Pacific American.png" alt="News 2" class="img-responsive">
+          <p>The Mid-States Minority Supplier Development Council is proud to celebrate Heritage Series. Asian Pacific American History Month and spotlight entrepreneurs during the month of May.</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>17 Jan, 2015</h4>
+          <h3>Lead IT is excited to share that we acquired the product company DOOT.</h3>
+          <img src="images/resource/doot_o.png" alt="News 3" class="img-responsive">
+          <p>Lead IT is excited to share that we acquired the product company DOOT. beta version is available in I-phone Appstore (Beta Version only, full version available very soon).</p>
+        </div>
+      </div>
+      <div id="news2015" class="row">
+        <div class="col-md-4 col-sm-12">
+          <h4>12 Jan 2015</h4>
+          <h3>we have been selected as the Top 20 companies by SiliconIndia</h3>
+          <img src="images/resource/LeadITCorpSilicontop20.jpg" alt="News 1" class="img-responsive">
+          <p>we have been selected as the top 20 most promising outsourced product development (OPD) companies by SiliconIndia. Lead IT has been showcased on the cover of SiliconIndia as a propulsive service provider.</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>12 Jan 2015</h4>
+          <h3>Lead IT has been showcased on the cover of SiliconIndia as a propulsive service provider</h3>
+          <img src="images/resource//silcon.jpeg" alt="News 2" class="img-responsive">
+        </div>
+       
+      </div>
+
+
+
+
+      <div id="news2014" class="row">
+        <div class="col-md-4 col-sm-12">
+          <h4>15 Dec, 2014</h4>
+          <h3>We are happy to inform that Lead IT India received the ISO27001:2013 certification</h3>
+          <img src="images/resource/iso-27001-2013.png" alt="ISO Certificate" class="img-responsive">
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>31 Oct, 2014</h4>
+          <h3>2014 Nominee BBB Torch Awards for business integrity</h3>
+          <img src="images/resource/award-img.jpg" alt="BBB Nominee" class="img-responsive">
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>31 Oct, 2014</h4>
+          <h3>Lead IT started Canada Operations</h3>
+          <img src="images/resource/llld.jpg" alt="Canada Office" class="img-responsive">
+          <p>Lead IT started Canada Operations from Nov 1st 2014. Mr. Hari Prathipati is the Director of Canada Operations. We wish him good luck and lots of success</p>
+        </div>
+      </div>
+
+
+
+      <div id="news2014" class="row">
+        <div class="col-md-4 col-sm-12">
+          <h4>9 September,2014</h4>
+          <h3>Lead IT Sponsored (O'Fallon Cricket league)</h3>
+          <img src="images/resource/team-img.jpg" alt="News 1" class="img-responsive">
+          <p>Lead IT corporation (http://www.leaditgroup.com) & US Wide financials (http://www.uswidefinancial.com) have sponsored this event along with several other individuals.</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>9 September,2014</h4>
+          <h3>Welcome to the BBB® Heart of Illinois!</h3>
+          <img src="images/resource/cbbb-badge-horz.png" alt="News 2" class="img-responsive">
+          <p>We are delighted to inform you that you have been chosen to be a BBB Accredited Business. As a BBB Accredited Business, you will find your BBB is the authority on trust in the marketplace and the leading resource for providing objective, unbiased information on businesses and charities to the public.</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>25 August,2014</h4>
+          <h3>Lead IT Earns Spot on 2014 Inc. 500|5000 List.</h3>
+          <img src="images/news/229c76e2-5b68-4282-b22a-f9a1a88b4447.png" alt="News 3" class="img-responsive">
+          <p>LEAD IT today announced it has been recognized as one of America's fastest-growing private companies on the 2014 Inc. 500|5000 list.</p>
+        </div>
+      </div>
+
+      <div class="row" id="news2014">
+        <div class="col-md-4 col-sm-12">
+          <h4>14 July, 2014</h4>
+          <h3>ACCELA SIGNS NEW PARTERS TO GROWING PARTNER</h3>
+          <p>ACCELA SIGNS NEW PARTERS TO GROWING PARTNER PROGRAM Services and Technology Alliance Partners Deliver Civic Platform Solutions for Government SAN RAMON, CA – July XX, 2014 – Accela, the leading provider of civic engagement solutions for government agencies, announced today significant momentum across the Accela Partner Program.</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>5 August, 2014</h4>
+          <h3>LEAD IT CORP.has been selected as one of the Awardees by DiversityBusiness.com.</h3>
+          <img src="images/resource/top-business-img.jpg" alt="News 5" class="img-responsive">
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>8 May, 2014</h4>
+          <h3>Lead IT Corporation had a Grand Opening Celebration for our new Rolling, Meadows, IL office on Tuesday, July 8th</h3>
+          <img src="images/resource/innv.jpg" alt="News 6" class="img-responsive">
+          <p>Our guest U.S. Representative, Tammy Duckworth (D-IL 8th District) since 2013.</p>
+        </div>
+      </div>
+
+<div class="row" id="news2014">
+<div class="col-md-4 col-sm-12">
+          <h4>15 April, 2014</h4>
+          <h3>Lead IT Corporation was invited to present at the Mid-States MSDC 1st Annual Conference</h3>
+          <img src="images/resource/office-img.jpg" alt="News 7" class="img-responsive">
+          <p>LEAD IT today announced it has been recognized as one of America's fastest-growing.</p>
+        </div>
+</div>
+
+      <div class="row" id="news2013">
+        <div class="col-md-4 col-sm-12">
+          <h4>25 OCT,2013</h4>
+          <h3>LEAD IT CORPORATION Rankings for 2013</h3>
+          <p>LEAD IT CORPORATION has ranked #6 in Top 10 Illinois Companies,ranked #8 in Top 10 IT Services Companies and ranked #74 in Top 100 Illinois Companies.</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>13 March, 2013</h4>
+          <h3>LEAD IT selected as Awardees by DiversityBusiness.com</h3>
+          <p>LEAD IT have distinguished ITself as one of the top entrepreneurs in the country and are most deserving of this award and recognition.LEAD IT rankings are16th ranking - Top 50 Women Owned Businesses in Illinois - 2013 37th ranking - Top 100 Diversity Owned Businesses in Illinois - 2013 288th ranking - Top 500 Women Owned Businesses in the U.S - 2013</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>02 October, 2013</h4>
+          <h3>LEAD IT is a finalist in Staffing Industry Analysts.</h3>
+          <p>LEAD IT is a finalist in Staffing Industry Analysts’ 2013 Best Staffing Firms to Work For, in the category for firms with 200+ employees. We are very grateful to all our employees and consultants who took time to provide their honest feedback and let the industry know how much they value our services and we thank each and every client who supported us and made it possible.</p>
+        </div>
+      </div>
+    
+
+      <div class="row" id="news2013">
+         <div class="col-md-4 col-sm-12">
+          <h4>31 October, 2013</h4>
+          <h3>BEST STAFFING FIRMS TO WORK FOR - Under the Category large over 200 Employees</h3>
+          <img src="images/resource/BestStffFirmTemp.gif" alt="News 7" class="img-responsive">
+        </div>
+         <div class="col-md-4 col-sm-12">
+          <h4>5 August, 2013</h4>
+          <h3>BEST STAFFING FIRMS TO WORK FOR - under the category Temp/Contract.</h3>
+          <img src="images/resource/BestStffFirmTemp13.gif" alt="News 7" class="img-responsive">
+        </div>
+      </div>
+      </div>
+
+           <div class="row" id="news2012">
+        <div class="col-md-4 col-sm-12">
+          <h4>12 May, 2012</h4>
+          <h3>2012 National MED Week Conference</h3>
+          <p>LEAD IT is proud to announce that we were one of the contributors for the celebration of 2012 National MED Week Conference that was held December 5-6, 2012 in Washington, D.C. This year’s MED WEEK event as with previous years was very informative, engaging and an excellent vehicle for MBEs, local officials and federal partners to come together and help ensure continued access to finance, contracts and markets. Lead IT along with other MED Week attendees, attended a Billion Dollar B2B Expo, a CEO Fireside Chat, embassy networking events, and power learning sessions.</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>07 July, 2012</h4>
+          <h3>DiversityBusiness.com recognized Lead IT as 34th ranking.</h3>
+          <p>DiversityBusiness.com recognized Lead IT as 34th ranking - Top 100 Women Owned Businesses in Illinois – 2012 ; 46th ranking - Top 100 Diversity Owned Businesses in Illinois – 2012; 293rd ranking - Top 500 Women Owned Businesses in the U.S - 2012</p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <h4>16 May, 2012</h4>
+          <h3>The Illinois Department of Commerce and Economic Opportunity (DCEO) awarded the contract to LEAD IT</h3>
+          <p>The Illinois Department of Commerce and Economic Opportunity (DCEO) awarded the contract to LEAD IT Corp located in Springfield, Illinois to obtain the services of supplemental technical resources to continue work on the new Percentage of Income Payment Plan (PIPP) program. This procurement is necessary in order to address system performance issues critical to the processing of PIPP program customers and operations of the Local Administering Agencies (LAAs) and 4 participating Utility companies.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+	
+	
+
+    
+	<div id="footer-placeholder"></div>
+	
+
+
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+<script>
+// Smooth scroll on click
+const links = document.querySelectorAll('.news-year-tabs a');
+links.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 120,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// Highlight active tab on scroll
+const sections = document.querySelectorAll('[id^="news20"]');
+const tabItems = document.querySelectorAll('.news-year-tabs li');
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        tabItems.forEach(li => li.classList.remove('active'));
+        document.querySelector(`.news-year-tabs a[href="#${id}"]`).parentElement.classList.add('active');
+      }
+    });
+  },
+  {
+    rootMargin: "-150px 0px -60% 0px",
+    threshold: 0
+  }
+);
+sections.forEach(section => observer.observe(section));
+</script>
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/tilt.jquery.min.js"></script>
+<script src="js/jquery.paroller.min.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/nav-tool.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/script.js"></script>
+
+ 
+
+
+</body>
+</html>
