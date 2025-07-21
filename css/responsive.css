@@ -93,13 +93,13 @@
 	}
 	
 	.news-section{
-		padding:100px 0px 80px;
+		padding:35px 0px 80px;
 	}
 	
 	.business-section,
 	.services-section,
 	.case-study-section{
-		padding-top:120px;
+		/* padding-top:120px; */
 	}
 	
 	.featured-section{
@@ -410,7 +410,7 @@
 	}
 	
 	.banner-section .image-column .inner-column{
-		padding-top:50px;
+		/* padding-top:50px; */
 	}
 	
 	.fact-counter .column .inner .text br,
@@ -1357,7 +1357,7 @@
 	}
 	
 	.business-section{
-		padding-top:80px;
+		padding-top:16px;
 	}
 	
 	.chain-block .inner-box .content{
