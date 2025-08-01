@@ -133,12 +133,46 @@
       .helpful-link-img { width: 70px; height: 70px; }
       .benefits-section { padding: 25px 0 30px 0; }
     }
+    .public-benefits-preview {
+  margin-top: 28px;
+  margin-bottom: 4px;
+  text-align: left;
+}
+.public-benefits-title {
+  font-size: 1.24rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #222;
+  letter-spacing: -0.1px;
+}
+.public-benefits-link {
+  color: #fa5c10;
+  font-size: 1.12rem;
+  font-weight: 400;
+  text-decoration: underline;
+  transition: color 0.15s;
+  display: inline-block;
+}
+.public-benefits-link:hover {
+  color: #22c4d6;
+}
+
+@media (max-width: 900px) {
+  .public-benefits-preview {
+    margin-top: 16px;
+    margin-bottom: 3px;
+  }
+  .public-benefits-title { font-size: 1rem; }
+  .public-benefits-link { font-size: 0.97rem; }
+}
+
+
   </style>
 </head>
 <script src="js/loader.js"></script>
 <body>
 <div class="page-wrapper">
-      <header class="main-header header-style-three">
+     <header class="main-header header-style-three">
   <!-- Header-Upper -->
   <div class="header-upper">
     <div class="auto-container clearfix">
@@ -204,6 +238,7 @@
                 <li><a href="corporate.html">Corporate </a></li>
 				<li><a href="project.html">Projects</a></li>
 					<li><a href="products.html">Products</a></li>
+					<li><a href="Resource.html">Resource</a></li>
 				<li><a href="News.html">News</a></li>
                 <li><a href="careers.html">Careers</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -214,7 +249,7 @@
           <!-- Broucher (Web) -->
            <div class="outer-box clearfix">
             <div class="btn-box">
-              <a href="./images/resource/Corporateb.pdf" class="btn-style-one theme-btn">
+              <a href="./images/resource/Corporateb.pdf" class="btn-style-one theme-btn" download>
                 <span class="txt"><i class="flaticon-download"></i> Broucher</span>
               </a>
             </div>
@@ -235,9 +270,9 @@
         <nav class="main-menu"></nav>
         <div class="outer-box clearfix">
           <div class="btn-box">
-            <a href="contact.html" class="btn-style-one theme-btn">
-              <span class="txt"><i class="flaticon-download"></i> Broucher</span>
-            </a>
+            <a href="./images/resource/Corporateb.pdf" class="btn-style-one theme-btn" download>
+                <span class="txt"><i class="flaticon-download"></i> Broucher</span>
+              </a>
           </div>
         </div>
       </div>
@@ -297,39 +332,39 @@
       </div>
       <table class="form-list-table">
         <tr>
-          <td><a class="form-link"href="/images//resource/Lead_Change_Address" download>Change of Address</a></td>
+          <td><a class="form-link"href="http://www.leaditgroup.com/Content/leadit-docs/Lead_Change_Address.pdf"download target="_blank">Change of Address</a></td>
           <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
-          <td><a class="form-link" href="#">Leave Form</a></td>
-          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
-        </tr>
-        <tr>
-          <td><a class="form-link" href="#">I-9</a></td>
-          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
-          <td><a class="form-link" href="#">Other State Tax Forms</a></td>
+          <td><a class="form-link" href="http://www.leaditgroup.com/Content/leadit-docs/Lead_Leave_Form.pdf" download target="_blank">Leave Form</a></td>
           <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
         </tr>
         <tr>
-          <td><a class="form-link" href="#">Direct Deposit</a></td>
+          <td><a class="form-link" href="http://www.leaditgroup.com/Content/leadit-docs/i-9Form.pdf" download target="_blank">I-9</a></td>
           <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
-          <td><a class="form-link" href="#">Timesheet</a></td>
-          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
-        </tr>
-        <tr>
-          <td><a class="form-link" href="#">Federal W-4</a></td>
-          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
-          <td><a class="form-link" href="#">Expense Reimbursement</a></td>
+          <td><a class="form-link" href="#" download target="_blank">Other State Tax Forms</a></td>
           <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
         </tr>
         <tr>
-          <td><a class="form-link" href="#">Illinois W4</a></td>
+          <td><a class="form-link" href="http://www.leaditgroup.com/Content/leadit-docs/Lead_Direct_Deposit.pdf" download target="_blank">Direct Deposit</a></td>
           <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
-          <td><a class="form-link" href="#">W-9</a></td>
+          <td><a class="form-link" href="http://www.leaditgroup.com/Content/leadit-docs/Lead_TS.pdf" download target="_blank">Timesheet</a></td>
           <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
         </tr>
         <tr>
-          <td><a class="form-link" href="#">Employee Information Page1</a></td>
+          <td><a class="form-link" href="http://www.leaditgroup.com/Content/leadit-docs/W42015.pdf" download target="_blank">Federal W-4</a></td>
           <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
-          <td><a class="form-link" href="#">Employee Information Page 2</a></td>
+          <td><a class="form-link" href="http://www.leaditgroup.com/Content/leadit-docs/Lead_ExpenseReimbursement.pdf" download target="_blank">Expense Reimbursement</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+        </tr>
+        <tr>
+          <td><a class="form-link" href="http://www.leaditgroup.com/Content/leadit-docs/IllinoisW4.pdf" download  target="_blank">Illinois W4</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+          <td><a class="form-link" href="https://www.irs.gov/pub/irs-pdf/fw9.pdf" download target="_blank">W-9</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+        </tr>
+        <tr>
+          <td><a class="form-link" href="http://www.leaditgroup.com/Content/leadit-docs/Employee%20Information%20Page%201.pdf" download target="_blank">Employee Information Page1</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+          <td><a class="form-link" href="http://www.leaditgroup.com/Content/leadit-docs/Employee%20Information%20Page%202.pdf" download target="_blank">Employee Information Page 2</a></td>
           <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
         </tr>
       </table>
@@ -343,9 +378,16 @@
 <!-- Insurance Forms Section -->
 <div class="tab-section" id="insurance-section">
   <div class="section-content">
-    <div class="section-img">
-      <img src="http://www.leaditgroup.com/images/insurance-forms-img.svg" alt="Insurance SVG Illustration">
+  <div class="section-img" style="display:flex;flex-direction:column;align-items:flex-start;">
+    <img src="http://www.leaditgroup.com/images/insurance-forms-img.svg" alt="Insurance SVG Illustration">
+    <!-- Public Benefits Preview (exactly under the image) -->
+    <div class="public-benefits-preview">
+      <div class="public-benefits-title">Public Benefits Preview</div>
+      <a class="public-benefits-link" href="https://secure.zenefits.com/benefitsPreview/requiredInformation?token=f32ab438-8d55-40d7-ba4c-bc1f2d3e1d83" target="_blank">
+        Check out the benefits LEAD IT CORPORATION has to offer
+      </a>
     </div>
+  </div>
     <div class="insurance-list">
       <div class="section-title">Insurance Forms</div>
       <div class="section-desc">
@@ -353,26 +395,24 @@
         <strong>Medical & Dental – United Health Care (UHC)</strong>
       </div>
       <table class="insurance-list-table">
-        <tr><td><a class="insurance-link" href="#">Lead IT UHC $500 plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
-        <tr><td><a class="insurance-link" href="#">Lead IT UHC $1000 plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
-        <tr><td><a class="insurance-link" href="#">Lead IT UHC $1500 plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
-        <tr><td><a class="insurance-link" href="#">Lead IT UHC $2500 plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
-        <tr><td><a class="insurance-link" href="#">Lead IT UHC HSA (Health Saving Account) plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
-        <tr><td><a class="insurance-link" href="#">Lead IT UHC Dental plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
-        <tr><td><a class="insurance-link" href="#">UHC Medical, DENTAL enrollment form and WAIVER form</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
+        <tr><td><a class="insurance-link" href="http://www.leaditgroup.com/Content/pdf/Lead%20IT%20UHC%20$500%20plan.pdf">Lead IT UHC $500 plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
+        <tr><td><a class="insurance-link" href="http://www.leaditgroup.com/Content/pdf/SummaryofBenefitsPLANOXS,$1000.pdf">Lead IT UHC $1000 plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
+        <tr><td><a class="insurance-link" href="http://www.leaditgroup.com/Content/pdf/SummaryofBenefitsPLANOXW,$1500.pdf">Lead IT UHC $1500 plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
+        <tr><td><a class="insurance-link" href="http://www.leaditgroup.com/Content/pdf/Lead%20IT%20UHC%20$2500%20Plan.pdf">Lead IT UHC $2500 plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
+        <tr><td><a class="insurance-link" href="http://www.leaditgroup.com/Content/pdf/SummaryofBenefitsPLANOZB,Savings(2500).pdf">Lead IT UHC HSA (Health Saving Account) plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
+        <tr><td><a class="insurance-link" href="http://www.leaditgroup.com/Content/pdf/UHCDentalPlan.pdf">Lead IT UHC Dental plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
+        <tr><td><a class="insurance-link" href="http://www.leaditgroup.com/Content/pdf/UHC%20Medical%20Enrollment%20Form.pdf">UHC Medical, DENTAL enrollment form and WAIVER form</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
       </table>
-      <div class="public-benefits">
-        Public Benefits Preview<br>
-        <a href="#">Check out the benefits LEAD IT CORPORATION has to offer</a>
-      </div>
+    
       <div class="section-contact">
         To improve our services, employees satisfaction will help us to improve your work experience with Lead IT please suggest your feedback. If you have any questions regarding how to fill any of these forms, then please contact: 
-        <a href="mailto:hr@leaditgroup.com">hr@leaditgroup.com</a> /
-        <a href="mailto:benefits@leaditgroup.com">benefits@leaditgroup.com</a>.
+        <a href="mailto:hr@leaditgroup.com">hr@leaditgroup.com</a> /<a href="mailto:benefits@leaditgroup.com">benefits@leaditgroup.com</a>.
       </div>
     </div>
   </div>
 </div>
+
+
 
 <!-- Helpful Links Section -->
 <div class="tab-section" id="helpful-section">
