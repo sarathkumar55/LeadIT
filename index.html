@@ -9,18 +9,37 @@
 <link href="css/responsive.css" rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 <link rel="icon" href="images/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<style>
+
+.banner-section {
+  position: relative;
+  min-height: 580px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+</style>
 </head>
  <script src="js/loader.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <body>
 
 <div class="page-wrapper">
@@ -105,7 +124,7 @@
           <!-- Broucher (Web) -->
            <div class="outer-box clearfix">
             <div class="btn-box">
-              <a href="./images/resource/Corporateb.pdf" class="btn-style-one theme-btn">
+              <a href="./images/resource/Corporateb.pdf" class="btn-style-one theme-btn" download>
                 <span class="txt"><i class="flaticon-download"></i> Broucher</span>
               </a>
             </div>
@@ -126,9 +145,9 @@
         <nav class="main-menu"></nav>
         <div class="outer-box clearfix">
           <div class="btn-box">
-            <a href="contact.html" class="btn-style-one theme-btn">
-              <span class="txt"><i class="flaticon-download"></i> Broucher</span>
-            </a>
+            <a href="./images/resource/Corporateb.pdf" class="btn-style-one theme-btn" download>
+                <span class="txt"><i class="flaticon-download"></i> Broucher</span>
+              </a>
           </div>
         </div>
       </div>
@@ -163,44 +182,60 @@
     <!-- End Main Header -->
 	
 	<!-- Banner Section -->
-    <section class="banner-section">
-		<div class="pattern-layer-three" style="background-image: url(images/main-slider/pattern-2.png)"></div>
-		<!-- <div class="icon-layer-one" style="background-image: url(images/main-slider/icon-1.png)"></div> -->
-		<div class="icon-layer-two" style="background-image: url(images/main-slider/icon-2.png)"></div>
-		<!-- <div class="icon-layer-three" style="background-image: url(images/main-slider/icon-3.png)"></div> -->
-		<div class="color-layer"></div>
-		<div class="auto-container" style="margin-top: -66px;">
-            <div class="row clearfix">
-				
-				<!-- Content Column -->
-				<div class="content-column col-lg-6 col-md-12 col-sm-12 order-2 order-lg-2">
-					<div class="inner-column">
-						<h1>Delivering Tech Talent and Solutions That Scale with You</h1>
-						<div class="text">From Fortune 500 enterprises to startups, we help clients build scalable, secure, and intelligent systems—backed by 30,000+ certified consultants and global delivery capabilities</div>
-						<div class="btns-box">
-							<a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Request a Consultation</span></a>
-							<a href="services.html" class="theme-btn btn-style-three"><span class="txt">Services</span></a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Image Column -->
-				<div class="image-column col-lg-6 col-md-12 col-sm- order-1 order-lg-2">
-					<div class="inner-column">
-						<div class="pattern-layer-one" style="background-image: url(images/main-slider/HomeSlider.png)"></div>
-						<div class="image" data-tilt data-tilt-max="4">
-							<img src="images/main-slider/HomeSlider.png" alt="" />
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</section>
+<div class="swiper myBannerSwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <section class="banner-section" style="background-image: url('images/resource/1.jpg');">
+        <!-- <div class="btns-box">
+          <a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Request a Consultation</span></a>
+          <a href="services.html" class="theme-btn btn-style-three"><span class="txt">Services</span></a>
+        </div> -->
+      </section>
+    </div>
+    <div class="swiper-slide">
+      <section class="banner-section" style="background-image: url('images/resource/2.jpg');">
+        <!-- <div class="btns-box">
+          <a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Request a Consultation</span></a>
+          <a href="services.html" class="theme-btn btn-style-three"><span class="txt">Services</span></a>
+        </div> -->
+      </section>
+    </div>
+    <div class="swiper-slide">
+      <section class="banner-section" style="background-image: url('images/resource/3.jpg');">
+        <!-- <div class="btns-box">
+          <a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Request a Consultation</span></a>
+          <a href="services.html" class="theme-btn btn-style-three"><span class="txt">Services</span></a>
+        </div> -->
+      </section>
+    </div>
+    <div class="swiper-slide">
+      <section class="banner-section" style="background-image: url('images/resource/4.jpg');">
+        <!-- <div class="btns-box">
+          <a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Request a Consultation</span></a>
+          <a href="services.html" class="theme-btn btn-style-three"><span class="txt">Services</span></a>
+        </div> -->
+      </section>
+    </div>
+    <div class="swiper-slide">
+      <section class="banner-section" style="background-image: url('images/resource/5.jpg');">
+        <!-- <div class="btns-box">
+          <a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Request a Consultation</span></a>
+          <a href="services.html" class="theme-btn btn-style-three"><span class="txt">Services</span></a>
+        </div> -->
+      </section>
+    </div>
+  </div>
+  <!-- Navigation & Dots -->
+  
+</div>
+
+
+
+
 	<!-- End Banner Section -->
 	
 	<!-- Services Section -->
-    <section class="services-section">
+    <section class="services-section" style="margin-top: 50px;">
 		<div class="auto-container">
 			<div class="row clearfix">
 			
@@ -209,7 +244,7 @@
 					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
 						<h3><a href="#">IT Services</a></h3>
 						<div class="icon">
-							<img src="images/resource/IT Services.png" alt="" />
+							<img src="images/resource/latestservice1.png" alt="" />
 						</div>
 						<div class="text">Future-Ready Technology for a Digital-First World.</div>
 					</div>
@@ -219,7 +254,7 @@
 					<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
 						<h3><a href="#">IT Staffing<br>Services</a></h3>
 						<div class="icon">
-							<img src="images/resource/IT Staffing.png" alt="" />
+							<img src="images/resource/latestservice2.png" alt="" />
 						</div>
 						<div class="text">On-Demand Talent. On-Point Delivery.</div>
 					</div>
@@ -230,7 +265,7 @@
 					<div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
 						<h3><a href="#"> IT Outsourcing <br> Services</a></h3>
 						<div class="icon">
-							<img src="images/resource/IT Outsourcing.png" alt="" />
+							<img src="images/resource/latestservice3.png" alt="" />
 						</div>
 						<div class="text">Smarter Operations. Lower Costs. Greater Agility.</div>
 					</div>
@@ -262,7 +297,7 @@
 				<div class="process-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="inner-box">
 						<div class="icon">
-							<img src="images/resource/Discovery.png" alt="" />
+							<img src="images/resource/latestDiscovery.jpg" alt="" />
 						</div>
 						<h3><a href="#">Discovery</a></h3>
 						<div class="text">We begin by understanding your challenges, goals, and technical environment. Through in-depth consultations and analysis, we gather the insights needed to tailor a solution that fits your business perfectly.</div>
@@ -273,7 +308,7 @@
 				<div class="process-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="inner-box">
 						<div class="icon">
-							<img src="images/resource/Planning.png" alt="" />
+							<img src="images/resource/latestPlanning.jpg" alt="" />
 						</div>
 						<h3><a href="#">Planning</a></h3>
 						<div class="text">Our expert team creates a strategic roadmap—outlining timelines, technologies, resources, and success metrics. We define clear milestones and align all stakeholders to ensure a smooth execution process.</div>
@@ -284,7 +319,7 @@
 				<div class="process-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="inner-box">
 						<div class="icon">
-							<img src="images/resource/Execution.png" alt="" />
+							<img src="images/resource/latestExecution.jpg" alt="" />
 						</div>
 						<h3><a href="#">Execution</a></h3>
 						<div class="text">With a strong foundation in place, our developers, engineers, and consultants get to work. We follow agile methodologies, ensuring flexibility, real-time feedback, and iterative progress throughout the lifecycle.</div>
@@ -295,7 +330,7 @@
 				<div class="process-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="inner-box">
 						<div class="icon">
-							<img src="images/resource/Delivery.png" alt="" />
+							<img src="images/resource/LatestDelivery.jpg" alt="" />
 						</div>
 						<h3><a href="#">Delivery & Optimization</a></h3>
 						<div class="text">We don’t just deliver, we ensure everything works seamlessly. Post-deployment, we perform rigorous testing, monitoring, & optimization to ensure client satisfaction.  </div>
@@ -375,7 +410,7 @@
 								<div class="image-column col-lg-6 col-md-12 col-sm-12">
 										<div class="color-box"></div>
 										<div class="image" style="margin-top: 150px;">
-											<img src="images/resource/Values.png" alt="" />
+											<img src="images/resource/latestValues.png" alt="" />
 										</div>
 									</div>
 									
@@ -404,7 +439,7 @@
 									<div class="image-column col-lg-6 col-md-12 col-sm-12">
 										<div class="color-box"></div>
 										<div class="image" style="margin-top: 150px;">
-											<img src="images/resource/Mission.png" alt="" />
+											<img src="images/resource/latestMission.png" alt="" />
 										</div>
 									</div>
 								</div>
@@ -429,7 +464,7 @@
 									<div class="image-column col-lg-6 col-md-12 col-sm-12">
 										<div class="color-box"></div>
 										<div class="image" style="margin-top: 150px;">
-											<img src="images/resource/Our Story.png" alt="" />
+											<img src="images/resource/latestOur Story.png" alt="" />
 										</div>
 									</div>
 								</div>
@@ -730,7 +765,26 @@ From sourcing to deployment, we offer end-to-end support across the entire IT li
 <script src="js/script.js"></script>
 
  
-
+<script>
+  var swiper = new Swiper('.myBannerSwiper', {
+    loop: true,
+    autoplay: {
+      delay: 2600,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 1,
+    spaceBetween: 0,
+    speed: 700
+  });
+</script>
 
 </body>
 </html>

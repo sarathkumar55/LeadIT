@@ -226,6 +226,8 @@
   box-shadow: none;
 }
 body {
+	
+   
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
@@ -3669,7 +3671,7 @@ body {
 
 .team-section{
 	position:relative;
-	padding:170px 0px 60px;
+	padding:81px 0px 60px;
 }
 
 .team-section .auto-container{
@@ -12562,5 +12564,262 @@ padding: 0px;
 	.banner-section-five{
 		    padding: 0px 0px 60px;
 	}
+}
+
+
+
+.pretty-text {
+  color: #3a3a4b;                       /* Soft dark gray */
+  font-family: 'Montserrat', 'Lato', Arial, sans-serif;
+  font-size: 2rem;                       /* Large, but adjust as needed */
+  font-weight: 400;                      /* Regular, looks refined */
+  text-align: center;                    /* Centered text */
+  line-height: 1.3;                      /* Good vertical spacing */
+  margin: 32px 0;                        /* Space above and below */
+  letter-spacing: 0.01em;                /* Slight tracking */
+}
+
+
+.skills-section {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding: 0 20px;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 32px;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 40px;
+}
+
+.skill {
+  margin-bottom: 18px;
+}
+
+.skill-title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #222;
+  display: inline-block;
+}
+
+.skill-percent {
+  float: right;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background: #e6e6e6;
+  border-radius: 10px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.skill-bar-inner {
+  height: 100%;
+  background: #1dc8e0; /* Teal blue */
+  border-radius: 10px;
+  transition: width 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 20px;
+  }
+}
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.clients-carousel-section {
+  width: 100%;
+  margin: 32px auto 0 auto;
+  text-align: center;
+  overflow: hidden;
+  background: #fff;
+}
+.carousel-title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+.clients-carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+.clients-carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 0; /* No gap */
+  width: max-content;
+  will-change: transform;
+}
+.clients-carousel-item {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  flex: none;
+  overflow: hidden;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clients-carousel-item .thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.client-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background: rgba(255,255,255,0.02);
+  border-radius: 50%;
+  padding: 16px;
+}
+.client-logo img {
+  width: 140px;
+  height: auto;
+  display: block;
+}
+@media (max-width: 1200px) {
+  .clients-carousel-item { width: 220px; height: 220px;}
+  .client-logo img { width: 60px;}
+}
+@media (max-width: 700px) {
+  .clients-carousel-item { width: 120px; height: 120px;}
+  .client-logo img { width: 32px;}
+}
+.clients-carousel-outer {
+  padding: 0 60px; /* Left/Right Gaps: adjust as needed (e.g., 5vw for fluid gap) */
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.partners-certification-section {
+  background: #22bfd5 url('/images/bg-geometric.png');
+  background-size: cover;
+  padding: 36px 0;
+  width: 100%;
+}
+
+.partners-container {
+  max-width: 1650px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 0 60px;
+}
+
+.partners-heading {
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.2rem;
+  min-width: 230px;
+  text-align: left;
+  line-height: 1.12;
+  font-weight: 400;
+}
+
+.partners-logos {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.logo-img {
+  max-height: 68px;
+  max-width: 180px;
+  object-fit: contain;
+  background: transparent;
+  margin: 0 8px;
+  display: block;
+}
+
+.msft-certified {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 140px;
+}
+
+.logo-caption {
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.1rem;
+  margin-top: 0.15em;
+  letter-spacing: 0.06em;
+}
+
+.partners-divider {
+  height: 78px;
+  width: 2px;
+  background: #fff8;
+  margin: 0 36px;
+}
+
+.partners-mbe-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.partners-mbe-text {
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.mbe-logo-img {
+  background: #fff;
+  border-radius: 2px;
+  padding: 7px;
+  max-width: 75px;
+  max-height: 75px;
+}
+
+@media (max-width: 1200px) {
+  .partners-container { flex-direction: column; align-items: flex-start; gap: 30px; padding: 0 12px; }
+  .partners-logos { gap: 16px; flex-wrap: wrap; }
+  .partners-heading { margin-right: 0; }
+}
+@media (max-width: 600px) {
+  .partners-heading { font-size: 1.2rem; }
+  .logo-img, .mbe-logo-img { max-width: 50px; max-height: 32px;}
+  .partners-divider { height: 30px; }
+}
+.hr-forms-right-box {
+  width: 100%;
+  float: right;
+  background: url('http://www.leaditgroup.com/images/hr-forms-img.svg') 0 37px no-repeat;
+  height: 510px;
+  margin-top: 65px;
 }
 

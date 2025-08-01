@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+<title>Lead IT</title>
+<!-- Stylesheets -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', Arial, sans-serif; background: #fff; margin: 0; padding: 0; color: #232b2b; }
+    .banner { position: relative; background: #23282c; color: #fff; min-height: 340px; overflow: hidden; }
+    .banner-bg { position: absolute; right: 0; top: 0; height: 100%; width: 70%; object-fit: cover; opacity: 0.50; z-index: 1; }
+    .banner-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 90px 0 20px 70px; display: flex; flex-direction: column; align-items: flex-start; }
+    .banner-title { font-size: 2.8rem; font-weight: 400; margin-bottom: 12px; }
+    .breadcrumb { position: absolute; right: 70px; top: 35px; z-index: 2; font-size: 1.1rem; color: #fff; opacity: 0.92; }
+    .breadcrumb a { color: #fff; text-decoration: none; }
+    .breadcrumb span { margin: 0 5px; }
+
+    /* Tab Bar */
+    .custom-tab-nav {
+      background: #536169;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0;
+      margin: 0;
+      border-bottom: none;
+      position: relative;
+      min-height: 60px;
+      z-index: 10;
+    }
+    .custom-tab-link {
+      color: #fff;
+      font-size: 1.2rem;
+      font-family: inherit;
+      font-weight: 400;
+      padding: 18px 56px 18px 56px;
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .custom-tab-link.active {
+      background: #22c4d6;
+      color: #fff;
+      font-weight: 400;
+    }
+    .custom-tab-link.active::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -8px;
+      width: 18px;
+      height: 12px;
+      background: transparent;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
+      border-top: 12px solid #22c4d6;
+    }
+    .custom-tab-link:not(.active):hover {
+      background: #4a5961;
+      color: #fff;
+    }
+    @media (max-width: 900px) {
+      .banner-content { padding-left: 25px; }
+      .custom-tab-link { font-size: 1.12rem; padding: 14px 18px; }
+      .breadcrumb { right: 16px; top: 18px; }
+    }
+
+    /* Section content */
+    .section-content { display: flex; max-width: 1400px; margin: 50px auto 0 auto; padding: 0 40px; align-items: flex-start; gap: 48px; }
+    .section-content .form-list, .section-content .insurance-list { flex: 1.0; }
+    .section-content .section-img { flex: 1; display: flex; align-items: center; justify-content: center; min-width: 300px; min-height: 330px; }
+    .section-img img { max-width: 100%; height: auto; display: block; }
+    .section-title { font-size: 2.1rem; margin-bottom: 10px; color: #232b2b; font-weight: 500; }
+    .section-desc { font-size: 1.09rem; color: #333; margin-bottom: 22px; margin-top: 0; font-weight: 400; }
+    .form-list-table { width: 100%; border-collapse: separate; border-spacing: 0 14px; font-size: 1.18rem; margin-top: 16px; margin-bottom: 16px; }
+    .form-list-table td { vertical-align: middle; padding: 6px 0; color: #353d3d; }
+    .form-link { color: #353d3d; text-decoration: none; font-size: 1.1rem; transition: color 0.16s; }
+    .form-link:hover { color: #1dc8e0; }
+    .pdf-icon { width: 24px; height: 24px; margin-left: 10px; vertical-align: middle; }
+    .insurance-list-table { width: 100%; border-collapse: separate; border-spacing: 0 10px; font-size: 1.12rem; margin-top: 14px; margin-bottom: 14px; }
+    .insurance-list-table td { vertical-align: middle; padding: 4px 0; color: #353d3d; }
+    .insurance-link { color: #353d3d; text-decoration: none; transition: color 0.15s; }
+    .insurance-link:hover { color: #1dc8e0; }
+    .public-benefits { margin: 30px 0 16px 0; font-size: 1.05rem; }
+    .public-benefits a { color: #fa5c10; text-decoration: underline; }
+    .section-contact { font-size: 1rem; color: #232b2b; margin-top: 28px; }
+    .section-contact a { color: #1dc8e0; text-decoration: underline;}
+    .helpful-links-section { margin: 80px auto 0 auto; max-width: 1500px; text-align: center; padding: 0 40px; }
+    .helpful-links-title { font-size: 2rem; font-weight: 500; margin-bottom: 38px; }
+    .helpful-links-row { display: flex; justify-content: center; align-items: flex-start; gap: 80px; margin-bottom: 30px; flex-wrap: wrap; }
+    .helpful-link-box { flex: 1 1 270px; max-width: 340px; min-width: 240px; margin-bottom: 38px; background: none; }
+    .helpful-link-img { width: 120px; height: 120px; object-fit: contain; margin-bottom: 14px; margin-top: 12px; }
+    .helpful-link-title { font-size: 1.34rem; margin-bottom: 12px; font-weight: 500; color: #222; }
+    .helpful-link-list { list-style: none; padding: 0; margin: 0; text-align: left; color: #3a4444; font-size: 1.06rem; }
+    .helpful-link-list li { margin-bottom: 8px; padding-left: 18px; position: relative; }
+    .helpful-link-list li::before { content: "◦"; position: absolute; left: 0; color: #1dc8e0; font-size: 1.1em; }
+    .benefits-section { background: #232b2b url('/mnt/data/ab92508a-952b-4033-bdf9-5bd492eb1784.png') right center no-repeat; background-size: cover; color: #fff; padding: 60px 0 70px 0; margin-top: 60px; }
+    .benefits-container { max-width: 1320px; margin: 0 auto; padding: 0 50px; display: flex; flex-direction: column; align-items: flex-start; }
+    .benefits-title { font-size: 2rem; font-weight: 500; margin-bottom: 24px; color: #fff; }
+    .benefits-desc { font-size: 1.1rem; font-weight: 400; margin-bottom: 18px; color: #fff; }
+    .benefits-list-table { margin-top: 18px; font-size: 1.12rem; width: 100%; color: #fff; }
+    .benefits-list-table td { padding: 8px 24px 8px 0; vertical-align: middle; }
+    .benefits-check { color: #1dc8e0; font-size: 1.4rem; margin-right: 6px; vertical-align: middle; }
+    @media (max-width: 1050px) {
+      .section-content { flex-direction: column; gap: 22px; }
+      .section-img { justify-content: flex-start; }
+      .benefits-container { padding: 0 10px;}
+    }
+    @media (max-width: 700px) {
+      .banner-title { font-size: 1.7rem; }
+      .section-title { font-size: 1.2rem;}
+      .helpful-links-title { font-size: 1.1rem;}
+      .helpful-links-row { gap: 14px; }
+      .helpful-link-img { width: 70px; height: 70px; }
+      .benefits-section { padding: 25px 0 30px 0; }
+    }
+  </style>
+</head>
+<script src="js/loader.js"></script>
+<body>
+<div class="page-wrapper">
+      <header class="main-header header-style-three">
+  <!-- Header-Upper -->
+  <div class="header-upper">
+    <div class="auto-container clearfix">
+      <div class="d-flex justify-content-between align-items-center d-md-none d-flex">
+        <!-- Logo (Mobile) -->
+        <div class="logo-box">
+          <a href="index.html">
+            <img src="images/Lead IT Logo.png" alt="" title="" />
+          </a>
+        </div>
+        <!-- Toggler (Mobile) -->
+        <div class="mobile-nav-toggler">
+          <span class="icon flaticon-menu"></span>
+        </div>
+      </div>
+
+      <div class="d-none d-md-flex justify-content-between align-items-center">
+        <!-- Logo (Desktop) -->
+        <div class="pull-left logo-box">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/Lead IT Logo.png" alt="" title="" />
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-outer clearfix d-flex align-items-center w-100 justify-content-between">
+          <!-- Main Menu -->
+          <nav class="main-menu navbar-expand-md w-100">
+            <div class="navbar-header">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+              <ul class="navigation clearfix">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="mega-dropdown dropdown">
+                  <a href="services.html" onclick="window.location.href='services.html'; return true;">Services</a>
+                  <div class="mega-menu">
+                    <ul class="column">
+                      <li><a href="service-detail.html?service=ai-ml">Artificial Intelligence & Machine Learning</a></li>
+                      <li><a href="service-detail.html?service=cloud">Cloud Computing & Infrastructure</a></li>
+                      <li><a href="service-detail.html?service=data_analytics">Advanced Data Analytics & Data Science</a></li>
+                      <li><a href="service-detail.html?service=cybersecurity">Cybersecurity & Risk Management</a></li>
+                      <li><a href="service-detail.html?service=iot_edge">Connected Intelligence (IoT & Edge Computing)</a></li>
+                    </ul>
+                    <div class="divider"></div>
+                    <ul class="column">
+                      <li><a href="service-detail.html?service=blockchain">Blockchain & Distributed Ledger Technologies</a></li>
+                      <li><a href="service-detail.html?service=rpa">Robotic Process Automation (RPA) & Intelligent Automation</a></li>
+                      <li><a href="service-detail.html?service=development">Development & Integration Capabilities (Full-Stack Excellence)</a></li>
+                      <li><a href="service-detail.html?service=integration">Enterprise Integration & API Management</a></li>
+                      <li><a href="service-detail.html?service=industry">Industry-Specific Solutions</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="corporate.html">Corporate </a></li>
+				<li><a href="project.html">Projects</a></li>
+					<li><a href="products.html">Products</a></li>
+				<li><a href="News.html">News</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <!-- Broucher (Web) -->
+           <div class="outer-box clearfix">
+            <div class="btn-box">
+              <a href="./images/resource/Corporateb.pdf" class="btn-style-one theme-btn">
+                <span class="txt"><i class="flaticon-download"></i> Broucher</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Header Upper -->
+
+  <!-- Sticky Header -->
+  <div class="sticky-header">
+    <div class="auto-container clearfix">
+      <div class="logo pull-left">
+        <a href="index.html" title=""><img src="images/Lead IT Logo.png" alt="" title="" /></a>
+      </div>
+      <div class="pull-right">
+        <nav class="main-menu"></nav>
+        <div class="outer-box clearfix">
+          <div class="btn-box">
+            <a href="contact.html" class="btn-style-one theme-btn">
+              <span class="txt"><i class="flaticon-download"></i> Broucher</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Sticky Menu -->
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="menu-backdrop"></div>
+    <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+
+    <nav class="menu-box">
+      <div class="nav-logo">
+        <a href="index.html"><img src="images/Lead IT Logo.png" alt="" title="" /></a>
+      </div>
+      <div class="menu-outer"><!-- Menu from JS --></div>
+      <!-- Mobile Broucher Button -->
+      <div class="mobile-broucher" style="text-align:center; padding: 15px;">
+        <a href="contact.html" class="btn-style-one theme-btn">
+          <span class="txt"><i class="flaticon-download"></i> Broucher</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <!-- End Mobile Menu -->
+</header>
+
+ 	
+    <!-- Preloader -->
+    <div class="preloader"></div>
+<!-- Banner -->
+<div class="banner">
+  <img class="banner-bg" src="/images/resource/banner-resources.jpg" alt="">
+  <div class="banner-content">
+    <div class="banner-title">Resources at LeadIT</div>
+  </div>
+  
+</div>
+
+<!-- Navigation as Anchor Links -->
+<nav class="custom-tab-nav" id="main-tabs">
+  <a href="#hr-section" class="custom-tab-link active">HR Forms</a>
+  <a href="#insurance-section" class="custom-tab-link">Insurance</a>
+  <a href="#helpful-section" class="custom-tab-link">Helpful Links</a>
+  <a href="#benefits-section" class="custom-tab-link">Benefits</a>
+</nav>
+
+<!-- HR Forms Section -->
+<div class="tab-section" id="hr-section">
+  <div class="section-content">
+    <div class="form-list">
+      <div class="section-title">HR Forms</div>
+      <div class="section-desc">
+        Below are the HR–related forms which can be viewed online or downloaded. To download a form, right-click the link and choose save to the required folder.<br><br>
+        Our competitive compensation and benefits program, combined with a strong employee relationship focus has allowed us to attract and retain a growing team of consultants.
+      </div>
+      <table class="form-list-table">
+        <tr>
+          <td><a class="form-link"href="/images//resource/Lead_Change_Address" download>Change of Address</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+          <td><a class="form-link" href="#">Leave Form</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+        </tr>
+        <tr>
+          <td><a class="form-link" href="#">I-9</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+          <td><a class="form-link" href="#">Other State Tax Forms</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+        </tr>
+        <tr>
+          <td><a class="form-link" href="#">Direct Deposit</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+          <td><a class="form-link" href="#">Timesheet</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+        </tr>
+        <tr>
+          <td><a class="form-link" href="#">Federal W-4</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+          <td><a class="form-link" href="#">Expense Reimbursement</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+        </tr>
+        <tr>
+          <td><a class="form-link" href="#">Illinois W4</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+          <td><a class="form-link" href="#">W-9</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+        </tr>
+        <tr>
+          <td><a class="form-link" href="#">Employee Information Page1</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+          <td><a class="form-link" href="#">Employee Information Page 2</a></td>
+          <td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="section-img">
+      <img src="/mnt/data/81cd3f2d-9ad6-4842-ad49-7666819f08a6.png" alt="Forms SVG Illustration">
+    </div>
+  </div>
+</div>
+
+<!-- Insurance Forms Section -->
+<div class="tab-section" id="insurance-section">
+  <div class="section-content">
+    <div class="section-img">
+      <img src="/mnt/data/b53e54f0-6910-429c-8430-0109aa44e0c8.png" alt="Insurance SVG Illustration">
+    </div>
+    <div class="insurance-list">
+      <div class="section-title">Insurance Forms</div>
+      <div class="section-desc">
+        Insurance Plan Details and Enrollment Forms<br>
+        <strong>Medical & Dental – United Health Care (UHC)</strong>
+      </div>
+      <table class="insurance-list-table">
+        <tr><td><a class="insurance-link" href="#">Lead IT UHC $500 plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
+        <tr><td><a class="insurance-link" href="#">Lead IT UHC $1000 plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
+        <tr><td><a class="insurance-link" href="#">Lead IT UHC $1500 plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
+        <tr><td><a class="insurance-link" href="#">Lead IT UHC $2500 plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
+        <tr><td><a class="insurance-link" href="#">Lead IT UHC HSA (Health Saving Account) plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
+        <tr><td><a class="insurance-link" href="#">Lead IT UHC Dental plan</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
+        <tr><td><a class="insurance-link" href="#">UHC Medical, DENTAL enrollment form and WAIVER form</a></td><td><img class="pdf-icon" src="/images//resource/pdf-icon.png" alt="pdf"></td></tr>
+      </table>
+      <div class="public-benefits">
+        Public Benefits Preview<br>
+        <a href="#">Check out the benefits LEAD IT CORPORATION has to offer</a>
+      </div>
+      <div class="section-contact">
+        To improve our services, employees satisfaction will help us to improve your work experience with Lead IT please suggest your feedback. If you have any questions regarding how to fill any of these forms, then please contact: 
+        <a href="mailto:hr@leaditgroup.com">hr@leaditgroup.com</a> /
+        <a href="mailto:benefits@leaditgroup.com">benefits@leaditgroup.com</a>.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Helpful Links Section -->
+<div class="tab-section" id="helpful-section">
+  <div class="helpful-links-section">
+    <div class="helpful-links-title">Helpful Links</div>
+    <div class="helpful-links-row">
+      <div class="helpful-link-box">
+        <img class="helpful-link-img" src="/mnt/data/a724a693-da09-4c97-8bd6-7d15fce0a012.png" alt="Resume Writing SVG">
+        <div class="helpful-link-title">Resume Writing</div>
+        <ul class="helpful-link-list">
+          <li>Resume tips and proven formats</li>
+          <li>More tips on writing that perfect resume</li>
+          <li>Resume preparation</li>
+        </ul>
+      </div>
+      <div class="helpful-link-box">
+        <img class="helpful-link-img" src="/mnt/data/ca0fcfa3-2fc7-48a9-aff5-c2b602dd9f87.png" alt="Interviewing SVG">
+        <div class="helpful-link-title">Interviewing</div>
+        <ul class="helpful-link-list">
+          <li>Sample interview Tips and questions</li>
+          <li>Negotiating your value</li>
+        </ul>
+      </div>
+      <div class="helpful-link-box">
+        <img class="helpful-link-img" src="/mnt/data/ed394ab5-acdf-4d17-9d2f-25de829dba83.png" alt="Immigration SVG">
+        <div class="helpful-link-title">Immigration</div>
+        <ul class="helpful-link-list">
+          <li>Common Procedures for Visa</li>
+          <li>To check your case status</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Benefits Section -->
+<div class="tab-section" id="benefits-section">
+  <div class="benefits-section" style="background-image:url('/mnt/data/ab92508a-952b-4033-bdf9-5bd492eb1784.png');">
+    <div class="benefits-container">
+      <div class="benefits-title">Benefits</div>
+      <div class="benefits-desc">
+        <b>Lead IT's compensation package</b> is among the best in the industry that is aimed at not only attracting but also retaining the best talent.<br><br>
+        Our competitive compensation and benefits program, combined with a strong employee relationship focus has allowed us to attract and retain a growing team of consultants.
+      </div>
+      <table class="benefits-list-table">
+        <tr>
+          <td><span class="benefits-check">&#10003;</span>Vacation/Personal Time Off</td>
+          <td><span class="benefits-check">&#10003;</span>Paid Holidays</td>
+        </tr>
+        <tr>
+          <td><span class="benefits-check">&#10003;</span>Performance Awards</td>
+          <td><span class="benefits-check">&#10003;</span>PPO Medical Insurance</td>
+        </tr>
+        <tr>
+          <td><span class="benefits-check">&#10003;</span>Candidate Referral Scheme</td>
+          <td><span class="benefits-check">&#10003;</span>Health Saving account</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<div id="footer-placeholder"></div>
+</div>
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+<script>
+  // Tab navigation logic for anchor menu
+  const tabLinks = document.querySelectorAll('.custom-tab-link');
+  const sectionIds = ['hr-section', 'insurance-section', 'helpful-section', 'benefits-section'];
+  const sections = sectionIds.map(id => document.getElementById(id));
+
+  // On click, activate the clicked tab
+  tabLinks.forEach((tab, idx) => {
+    tab.addEventListener('click', function(e) {
+      tabLinks.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+
+  // On scroll, update active tab based on section in viewport
+  window.addEventListener('scroll', function() {
+    let current = 0;
+    for (let i = 0; i < sections.length; i++) {
+      const rect = sections[i].getBoundingClientRect();
+      if (rect.top <= 110) current = i;
+    }
+    tabLinks.forEach((tab, idx) => {
+      if (idx === current) tab.classList.add('active');
+      else tab.classList.remove('active');
+    });
+  });
+</script>
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/tilt.jquery.min.js"></script>
+<script src="js/jquery.paroller.min.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/nav-tool.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
