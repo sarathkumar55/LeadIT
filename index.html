@@ -39,6 +39,44 @@
     min-height: 0px!important;
   }
 }
+.btns-box {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;        /* Adjust to move button up/down */
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Style the button: white bg, black text */
+.theme-btn.btn-style-two {
+  background: #fff !important;
+  color: #222 !important;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.08rem;
+  border: none;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  transition: background 0.18s, color 0.18s;
+  padding: 13px 36px;
+}
+
+.theme-btn.btn-style-two:hover {
+  background: #222 !important;
+  color: #fff !important;
+}
+
+.theme-btn .txt {
+  color: inherit !important;
+}
+
+@media (max-width: 700px) {
+  .banner-section { min-height: 200px; }
+  .btns-box { bottom: 14px; }
+  .theme-btn.btn-style-two { padding: 11px 24px; font-size: 1rem; }
+}
 
 </style>
 </head>
@@ -190,49 +228,40 @@
 <div class="swiper myBannerSwiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      <section class="banner-section" style="background-image: url('images/resource/1.jpg');">
-        <!-- <div class="btns-box">
-          <a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Request a Consultation</span></a>
-          <a href="services.html" class="theme-btn btn-style-three"><span class="txt">Services</span></a>
-        </div> -->
+      <section class="banner-section" style="background-image: url('images/resource/HomeSlide1.png'); position: relative;">
+        
       </section>
     </div>
     <div class="swiper-slide">
-      <section class="banner-section" style="background-image: url('images/resource/2.jpg');">
-        <!-- <div class="btns-box">
-          <a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Request a Consultation</span></a>
-          <a href="services.html" class="theme-btn btn-style-three"><span class="txt">Services</span></a>
-        </div> -->
+      <section class="banner-section" style="background-image: url('images/resource/HomeSlide2.png'); position: relative;">
+        <div class="btns-box">
+          <a href="services.html" class="theme-btn btn-style-two"><span class="txt">Learn More</span></a>
+        </div>
       </section>
     </div>
     <div class="swiper-slide">
-      <section class="banner-section" style="background-image: url('images/resource/3.jpg');">
-        <!-- <div class="btns-box">
-          <a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Request a Consultation</span></a>
-          <a href="services.html" class="theme-btn btn-style-three"><span class="txt">Services</span></a>
-        </div> -->
+      <section class="banner-section" style="background-image: url('images/resource/HomeSlide3.png'); position: relative;">
+        <div class="btns-box">
+          <a href="about.html" class="theme-btn btn-style-two"><span class="txt">Learn More</span></a>
+        </div>
       </section>
     </div>
     <div class="swiper-slide">
-      <section class="banner-section" style="background-image: url('images/resource/4.jpg');">
-        <!-- <div class="btns-box">
-          <a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Request a Consultation</span></a>
-          <a href="services.html" class="theme-btn btn-style-three"><span class="txt">Services</span></a>
-        </div> -->
+      <section class="banner-section" style="background-image: url('images/resource/HomeSlide4.png'); position: relative;">
+        <div class="btns-box">
+          <a href="services.html" class="theme-btn btn-style-two"><span class="txt">Learn More</span></a>
+        </div>
       </section>
     </div>
     <div class="swiper-slide">
-      <section class="banner-section" style="background-image: url('images/resource/5.jpg');">
-        <!-- <div class="btns-box">
-          <a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Request a Consultation</span></a>
-          <a href="services.html" class="theme-btn btn-style-three"><span class="txt">Services</span></a>
-        </div> -->
+      <section class="banner-section" style="background-image: url('images/resource/HomeSlide5.png'); position: relative;">
+        
       </section>
     </div>
   </div>
-  <!-- Navigation & Dots -->
-  
+  <!-- Navigation & Dots here -->
 </div>
+
 
 
 
@@ -790,6 +819,7 @@ From sourcing to deployment, we offer end-to-end support across the entire IT li
     speed: 700
   });
 </script>
+
 
 </body>
 </html>
