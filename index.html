@@ -34,23 +34,25 @@
   background-position: center center;
   background-repeat: no-repeat;
 }
-@media (max-width: 700px) {
-  .banner-section {
-    min-height: 0px!important;
-  }
-}
+
+/* Default button position (bottom center) */
 .btns-box {
   position: absolute;
   left: 50%;
-  bottom: 20px;        /* Adjust to move button up/down */
+  bottom: 20px;
   transform: translateX(-50%);
   z-index: 2;
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: auto;
 }
 
-/* Style the button: white bg, black text */
+/* Example: Different button positions for each slide (customize as needed) */
+.btns-box-2 { bottom: 175px; left: 65%; transform: translateX(-50%); }   /* higher up */
+.btns-box-3 { bottom: 195px; left: 69%; transform: translateX(-50%); }  /* higher and right */
+.btns-box-4 { bottom: 30px; left: 40%; transform: translateX(0); }      /* lower, left */
+
+/* Button styles */
 .theme-btn.btn-style-two {
   background: #fff !important;
   color: #222 !important;
@@ -62,20 +64,16 @@
   transition: background 0.18s, color 0.18s;
   padding: 13px 36px;
 }
-
 .theme-btn.btn-style-two:hover {
   background: #222 !important;
   color: #fff !important;
 }
+.theme-btn .txt { color: inherit !important; }
 
-.theme-btn .txt {
-  color: inherit !important;
-}
-
+/* Hide button on mobile, make image min-height smaller */
 @media (max-width: 700px) {
-  .banner-section { min-height: 200px; }
-  .btns-box { bottom: 14px; }
-  .theme-btn.btn-style-two { padding: 11px 24px; font-size: 1rem; }
+  .banner-section { min-height: 130px !important; }
+  .btns-box { display: none !important; }
 }
 
 </style>
@@ -228,39 +226,43 @@
 <div class="swiper myBannerSwiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      <section class="banner-section" style="background-image: url('images/resource/HomeSlide1.png'); position: relative;">
-        
-      </section>
+      <!-- Slide 1: No link, no button -->
+      <section class="banner-section" style="background-image: url('images/resource/HomeSlide1.png'); position: relative;"></section>
     </div>
     <div class="swiper-slide">
-      <section class="banner-section" style="background-image: url('images/resource/HomeSlide2.png'); position: relative;">
-        <div class="btns-box">
-          <a href="services.html" class="theme-btn btn-style-two"><span class="txt">Learn More</span></a>
-        </div>
-      </section>
+      <a href="services.html" class="banner-link">
+        <section class="banner-section" style="background-image: url('images/resource/HomeSlide2.png'); position: relative;">
+          <div class="btns-box btns-box-2">
+            <span class="theme-btn btn-style-two"><span class="txt">Learn More</span></span>
+          </div>
+        </section>
+      </a>
     </div>
     <div class="swiper-slide">
-      <section class="banner-section" style="background-image: url('images/resource/HomeSlide3.png'); position: relative;">
-        <div class="btns-box">
-          <a href="about.html" class="theme-btn btn-style-two"><span class="txt">Learn More</span></a>
-        </div>
-      </section>
+      <a href="about.html" class="banner-link">
+        <section class="banner-section" style="background-image: url('images/resource/HomeSlide3.png'); position: relative;">
+          <div class="btns-box btns-box-3">
+            <span class="theme-btn btn-style-two"><span class="txt">Learn More</span></span>
+          </div>
+        </section>
+      </a>
     </div>
     <div class="swiper-slide">
-      <section class="banner-section" style="background-image: url('images/resource/HomeSlide4.png'); position: relative;">
-        <div class="btns-box">
-          <a href="services.html" class="theme-btn btn-style-two"><span class="txt">Learn More</span></a>
-        </div>
-      </section>
+      <a href="services.html" class="banner-link">
+        <section class="banner-section" style="background-image: url('images/resource/HomeSlide4.png'); position: relative;">
+          <div class="btns-box btns-box-4">
+            <span class="theme-btn btn-style-two"><span class="txt">Learn More</span></span>
+          </div>
+        </section>
+      </a>
     </div>
     <div class="swiper-slide">
-      <section class="banner-section" style="background-image: url('images/resource/HomeSlide5.png'); position: relative;">
-        
-      </section>
+      <!-- Slide 5: No link, no button -->
+      <section class="banner-section" style="background-image: url('images/resource/HomeSlide5.png'); position: relative;"></section>
     </div>
   </div>
-  <!-- Navigation & Dots here -->
 </div>
+
 
 
 
